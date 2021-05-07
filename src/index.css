@@ -11,3 +11,47 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form{
+  background-color:aliceblue;
+  padding: 20px;
+}
+input[type=email],input[type=password] {
+  width:400px;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  color: #182430;
+  border: 1px solid salmon ;
+  border-radius:12px ;
+  min-width:200px;
+}
+
+input:focus[type=email],input[type=password]{
+  width:400px;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  color: #182430;
+  border: 1px solid salmon ;
+  border-radius:12px ;
+  min-width:200px;
+}
+input[type=submit] {    
+  width:100px;
+  padding: 15px 20px;
+  margin: 0px 0;
+  box-sizing: border-box;
+  border-radius:12px ;
+  background-color: #8899A6;
+  color: #182430;
+  border: none;
+}
+
+
