@@ -10,12 +10,13 @@ import Home from '../src/components/Home'
 import { AuthProvider} from '../src/contexts/AuthContext'
 import DashBoard from "./components/DashBoard";
 import PrivateRoute from "./services/PrivateRoute";
+import './vanilla.css'
 
 function App() {
   return (
     <Router>
       <AuthProvider>
-        <div className="App">    
+        <div className="fontStyle text-gray-700">    
           <Switch>
             <Route exact path="/">
               <Home />

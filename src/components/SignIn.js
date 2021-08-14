@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom'
 function SignIn() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const { signin,currentUser }=useAuth();
+    const { signin }=useAuth();
     const [error,setError]=useState(null);
     const history=useHistory();
 
@@ -24,12 +24,14 @@ function SignIn() {
 
     return (
         <div>
-            { currentUser && JSON.stringify(currentUser)}
+            {/* { currentUser && JSON.stringify(currentUser)} */}
+
             <div className="content">  
            
             { error && <div>{ error['code'].slice(5)}</div> }          
-                <form onSubmit={(e)=>handleLogin(e)}>
-                    <label htmlFor="">Email : </label>
+                <form onSubmit={(e)=>handleLogin(e)}  
+                className="flex flex-col text-xl bg-gray-200 self-center">
+                    <label>Email</label>                    
                     <input 
                     type="email" 
                     required
@@ -37,11 +39,14 @@ function SignIn() {
                     placeholder="search a place"
                     onChange={(e)=>setEmail(e.target.value)}
                     />
-                    <br/>
-                    <label htmlFor="">Password : </label>
+                    
+                    <label>Password </label>
+                    
                     <input type="password" name="" id="" value={ password} onChange={ (e)=>setPassword(e.target.value)}/>
-                    <br/>
-                    <input type="submit" value="LOGIN"/>
+                  
+                    <input type="submit" value="LOGIN" 
+                    className="text-white bg-gray-800 p-1.5"                        
+                    />
                 </form>                
             </div>
             
