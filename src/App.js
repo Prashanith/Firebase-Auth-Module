@@ -18,6 +18,7 @@ function App() {
       <AuthProvider>
         <div className="fontStyle text-gray-700">    
           <Switch>
+          
             <Route exact path="/">
               <Home />
             </Route>
